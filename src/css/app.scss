@@ -1,0 +1,50 @@
+// app global css in SCSS form
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.resize-cursor {
+  cursor: ew-resize;
+  cursor: col-resize;
+}
+
+.q-field--with-bottom {
+  transition: padding 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+
+  &:not(.q-field--error) {
+    padding-bottom: 0px;
+  }
+}
+
+textarea {
+  resize: none !important;
+}
+
+[class*="dark"] {
+  color: #cccccc;
+}
+
+// quasar
+
+.q-table__card .q-table__top,
+.q-table__card .q-table__bottom {
+  @apply gap-2;
+}
+
+.opacity-enter-active,
+.opacity-leave-active {
+  @apply transition;
+}
+
+.opacity-enter-from,
+.opacity-leave-to {
+  opacity: 0;
+}
+
+.q-table tbody td {
+  overflow: hidden;
+}
